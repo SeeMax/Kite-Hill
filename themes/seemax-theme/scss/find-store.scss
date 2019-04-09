@@ -1,0 +1,64 @@
+@import "colors";
+
+.find-store-page {
+
+  .hero-section {
+    height: 200px;
+  }
+
+}
+
+.destini-section {
+  padding:25px;
+}
+
+.new-look-section {
+
+  .content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  h2 {
+    margin-bottom: 45px;
+  }
+
+  hr {
+    max-width: 380px;
+    width:100%;
+    margin-bottom:45px;
+  }
+
+  img {
+    position: relative;
+  }
+}
+
+
+
+// 1024px And Below
+@media screen and (max-width: 1024px){
+
+  .find-store-page {
+
+  }
+}
+
+// 767px And Below
+@media screen and (max-width: 767px){
+
+  .find-store-page {
+
+    .hero-section {
+      height: 350px;
+    }
+
+    .new-look-section {
+
+      img {
+
+      }
+    }
+  }
+}

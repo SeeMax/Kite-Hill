@@ -1,0 +1,152 @@
+@import "colors";
+
+.contact-page {
+
+}
+
+.contact-options-section {
+  margin-bottom: 80px;
+  margin-top:60px;
+
+  .content {
+    justify-content: space-between;
+  }
+}
+
+.contact-form-half {
+
+  h2 {
+    margin-bottom: 50px;
+  }
+
+  form {
+    width:100%;
+
+    p {
+      margin-top:0;
+    }
+  }
+
+  span {
+    display: inline-block;
+    width:100%;
+    margin-bottom:40px;
+  }
+
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: $brown;
+    font-size: 18px;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    color: $brown;
+    font-size: 18px;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    color: $brown;
+    font-size: 18px;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    color: $brown;
+    font-size: 18px;
+  }
+
+  input, textarea {
+    width:100%;
+    border-radius: 10px;
+    border:2px solid $brown;
+    padding:36px 20px 14px 20px;
+  }
+
+  .wpcf7-submit {
+    width:auto;
+  	position: relative;
+  	font:400 18px/1 'neuzeit_grotesk', sans-serif;
+  	text-transform: uppercase;
+  	background:$blue;
+  	border:2px solid $blue;
+  	color:white;
+  	padding:14px 40px 12px 40px;
+  	border-radius:6px;
+
+  	a {
+  		color:white;
+  	}
+  }
+
+  div.wpcf7-response-output {
+    margin-left:0;
+    margin-right:0;
+  }
+}
+
+.contact-links-half {
+
+  a {
+    font-weight: 800;
+    transition:color .3s ease;
+
+    &:hover {
+      color:$blue;
+    }
+  }
+
+  h2 {
+    border-top:2px solid $brown;
+    padding-top:24px;
+    margin-bottom: 30px;
+  }
+
+  .phone-link {
+    text-decoration: underline;
+  }
+}
+
+.contact-links-part {
+  margin-bottom: 40px;
+}
+
+
+
+
+
+// 1024px And Below
+@media screen and (max-width: 1024px){
+
+  .contact-page {
+
+    .hero-section {
+
+      h1 {
+        width:60%;
+      }
+
+      br {
+        display: none;
+      }
+    }
+  }
+}
+
+// 767px And Below
+@media screen and (max-width: 767px){
+
+  .contact-page {
+
+    .hero-section {
+      height:360px;
+
+      h1 {
+        width:100%;
+      }
+
+      br {
+        display: none;
+      }
+    }
+
+    .contact-links-half {
+      margin-top:60px;
+    }
+  }
+
+}

@@ -1,0 +1,59 @@
+@import "colors";
+
+.subscribe-bar-section {
+  color:white;
+
+  .content {
+    padding-top:50px;
+    padding-bottom:50px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h2 {
+    color:white;
+    width:100%;
+    padding-top:0px;
+    border-top:0px solid $brown;
+    margin-bottom:10px;
+  }
+
+  .button-half {
+
+  }
+
+  .words-half {
+    padding-left:15%;
+  }
+
+  #mc_embed_signup {
+    max-width:300px;
+
+    .clear, #mc-embedded-subscribe {
+      opacity: 0;
+      height: 0;
+      overflow: hidden;
+      padding: 0;
+      margin:0;
+    }
+
+    .button {
+      margin-top:0;
+      font-size:20px;
+      padding:18px 16px;
+      text-transform: uppercase;
+      border-width: 2px;
+    }
+  }
+}
+
+// 1024px And Below
+@media screen and (max-width: 1024px){
+
+}
+
+
+// 767px And Below
+@media screen and (max-width: 767px){
+
+}

@@ -1,0 +1,162 @@
+@import "colors";
+
+.our-foods-page {
+
+  .food-filter-section {
+
+    .content {
+      flex-wrap:nowrap;
+      padding-top:50px;
+      padding-bottom:20px;
+    }
+
+    .filter-title {
+      white-space: nowrap;
+    }
+
+    ul {
+      margin-left: 60px;
+    }
+
+    li {
+      display: inline-block;
+      margin-right:35px;
+      border-bottom: 2px solid white;
+      margin-bottom: 5px;
+
+      a {
+
+      }
+    }
+
+    .active {
+      border-bottom: 2px solid $blue;
+      color:$blue;
+    }
+  }
+
+  .food-group {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    margin-bottom: 70px;
+
+    .words-half {
+      position: relative;
+      padding-top:50px;
+
+      h2 {
+        margin-bottom:30px;
+      }
+
+      p {
+        width:100%;
+      }
+
+      .button {
+        display: inline-block;
+        margin-top:35px;
+      }
+    }
+
+    hr {
+      margin-bottom: 35px;
+      width:100%;
+    }
+
+    &:nth-child(even) {
+
+      .words-half {
+        order:2;
+      }
+
+      .image-half {
+        order:1;
+      }
+    }
+  }
+
+  .find-section {
+
+    .content {
+      justify-content: center;
+      padding-bottom:40px;
+    }
+
+    h2 {
+      color: white;
+      text-align: center;
+    }
+
+    .button {
+      background: none;
+      border:1px solid white;
+      color:white;
+      display:flex;
+      padding:20px 12px 18px 10px;
+      margin-top:30px;
+      margin-bottom:20px;
+
+      span {
+        display: block;
+        margin-right:60px;
+      }
+    }
+  }
+
+}
+
+
+// 1024px And Below
+@media screen and (max-width: 1024px){
+
+}
+
+// 767px And Below
+@media screen and (max-width: 767px){
+
+  .our-foods-page {
+
+    .food-filter-section {
+
+      .content {
+        flex-wrap:wrap;
+      }
+
+      ul {
+        margin-left: 0px;
+        margin-top:8px;
+      }
+
+      li {
+        margin-right:20px;
+      }
+    }
+
+    .food-group {
+
+      .words-half {
+        order:2;
+      }
+
+      .image-half {
+        order:1;
+      }
+
+      &:nth-child(even) {
+
+        .words-half {
+          order:2;
+        }
+
+        .image-half {
+          order:1;
+        }
+      }
+
+      .image-half {
+        margin-top:30px;
+      }
+    }
+  }
+}

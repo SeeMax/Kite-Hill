@@ -1,0 +1,122 @@
+@import "colors";
+
+.faq-page {
+
+  .hero-section {
+
+  }
+}
+
+.qa-section {
+
+  .content {
+
+  }
+}
+
+.faq-qa-section {
+  width:100%;
+
+  h2 {
+    padding-top: 30px;
+    margin:10px 0px;
+    border-top: 1px solid $brown;
+  }
+}
+
+.single-qa {
+  width:100%;
+  display: flex;
+}
+
+.single-qa-close {
+  padding:0px 20px;
+  display: inline-block;
+  font-size: 36px;
+  line-height: 1;
+  position: relative;
+  top:6px;
+}
+
+.single-qa-content {
+  width:100%;
+  margin:10px 0px 10px 0px;
+}
+
+.single-qa-q {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom:1em;
+  display: inline-block;
+  cursor:pointer;
+}
+
+.single-qa-a {
+  padding-left:100px;
+  overflow:hidden;
+
+  p {
+    margin-top:0;
+  }
+}
+
+.cant-find-section {
+
+
+  .content {
+    padding-top:80px;
+    padding-bottom:120px;
+  }
+
+  h3 {
+    line-height: 1.2;
+  }
+
+  a {
+    font-weight: 800;
+    color:$blue;
+  }
+
+  .thick-blue {
+    font-weight: 800;
+    color:$blue;
+    margin-bottom: 30px;
+  }
+
+  .thick-brown {
+    font-weight: 800;
+    color:$brown;
+  }
+}
+
+.faq-watermark {
+  position: absolute;
+  bottom:-60px;
+  right:-160px;
+  z-index: -1;
+}
+
+
+
+// 1024px And Below
+@media screen and (max-width: 1024px){
+
+}
+
+
+// 767px And Below
+@media screen and (max-width: 767px){
+
+  .single-qa-q {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .single-qa-a {
+    padding-left:60px;
+  }
+
+  .single-qa-close {
+    top:0;
+  }
+}

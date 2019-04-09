@@ -1,0 +1,89 @@
+/* Editor Styles 
+These styles will adjust the visual editor to reflect the styles on the website
+*/
+
+
+@font-face {
+    font-family: 'ClarendonSerialLightRegular';
+    src: url('../fonts/clarendon/clarendon_serial-light.eot');
+    src: url('../fonts/clarendon/clarendon_serial-light.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/clarendon/clarendon_serial-light.woff') format('woff'),
+         url('../fonts/clarendon/clarendon_serial-light.ttf') format('truetype'),
+         url('../fonts/clarendon/clarendon_serial-light.svg#ClarendonSerialLightRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+html .mceContentBody {
+    background: none repeat scroll 0 0 #FFFFFF;
+    margin: 0;
+    padding: 10px;
+	border-left:1px solid #D1D1D1;
+}
+
+* {
+    font-family: 'ClarendonSerialLightRegular', courier, serif;
+    color: #000;
+	font-size:14px;
+}
+
+.aligncenter{ display:block; clear:both; margin:0 auto; }
+.alignleft{ float:left; }
+.alignright{ float:right; }
+
+ul, ol{ margin:0 0 20px 20px; font-size:14px; }
+ul li, ol li{ margin:0 0 14px; }
+
+blockquote{ }
+
+h1,h2,h3,h4,h5,h6{ text-transform:uppercase; font-family:'Gotham A', 'Gotham B',​sans-serif; font-weight: 700; }
+
+h1{ font-size:40px; line-height:40px; }
+h2{ font-size:29.04px; margin:0 auto; display:block; clear:both; text-align:center; line-height:29.04px; }
+h3{ font-size:40px; line-height:40px; }
+h4{ font-size:28px; line-height:28px; }
+h5{ }
+h6{ }
+
+a:link { color:#999933; }
+a:visited { color:#999933; }
+a:active, a:hover { color:#999933; }
+
+blockquote{ }
+
+p{ margin:0 0 20px; font-size:14px; line-height:24px; }
+
+/* custom editor styles */
+ 
+.my_meta_control .customEditor
+{ margin:15px 6px; border:1px solid #ccc; }
+ 
+.my_meta_control .customEditor textarea
+{ border:0; }
+ 
+#post-body .my_meta_control .customEditor .mceStatusbar a.mceResize
+{ top:-2px; }
+ 
+/* extra styles used in other WPAlchemy meta boxes */
+ 
+.my_meta_control .description
+{ display:none; }
+  
+.my_meta_control label
+{ display:block; font-weight:bold; margin:6px; margin-bottom:0; margin-top:12px; }
+  
+.my_meta_control label span
+{ display:inline; font-weight:normal; }
+  
+.my_meta_control span
+{ color:#999; }
+  
+.my_meta_control textarea, .my_meta_control input[type='text']
+{ margin-bottom:3px; width:99%; }
+  
+.my_meta_control h4
+{ color:#999; font-size:1em; margin:15px 6px; text-transform:uppercase; }
+
+.button{ display: inline-block; font-weight:bold; padding: 6px 8px 5px; font-family: 'lucida grande', tahoma, verdana, arial, sans-serif; font-size: 12px; color: #3C3C3D; text-shadow: 1px 1px 0 #FFFFFF; background: #e7e7e7; white-space: nowrap; overflow: visible; cursor: pointer; text-decoration: none; border: 1px solid #CACACA; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; outline: none; position: relative; zoom: 1; line-height: 1.11; *display: inline; *vertical-align: middle; margin:0 0 20px 0; }

@@ -1,0 +1,208 @@
+@import "colors";
+
+html, body {
+	height:100%;
+	width:100%;
+}
+
+body {
+	font:400 20px/1.3 'neuzeit_grotesk', sans-serif;
+	color:$brown;
+	position: relative;
+}
+
+.wrapper {
+	width:100%;
+	min-height: 100%;
+	margin:0 auto;
+	overflow: hidden;
+}
+
+main {
+	position: relative;
+	min-height: 100%;
+	width:100%;
+}
+
+section {
+	position: relative;
+	width:100%;
+	height:auto;
+}
+
+.wp-block-spacer {
+  width: 100%;
+}
+
+.content {
+	position: relative;
+	display:flex;
+	flex-wrap:wrap;
+	width:100%;
+	height:auto;
+	max-width: 1045px;
+	margin:0px auto;
+	padding:45px 25px 30px 25px;
+}
+
+a {
+	color:$brown;
+	text-decoration:none;
+	letter-spacing: 1;
+}
+
+h1, h2, h3, h4, h5 {
+	font-size:48px;
+	font-weight:800;
+	line-height: 1;
+	margin:0;
+	width:100%;
+}
+
+h1 {
+
+}
+
+h2 {
+	font-size:42px;
+}
+
+h3 {
+	font-size:30px;
+	font-weight: 400;
+}
+
+h4 {
+
+}
+
+h5 {
+
+}
+
+p {
+
+}
+
+ul {
+
+	li {
+		position: relative;
+	}
+}
+
+hr {
+	background:$brown;
+	margin:0;
+	text-align:left;
+	border:0;
+	width:100%;
+	height:2px;
+}
+
+.button {
+	position: relative;
+	font:400 18px/1 'neuzeit_grotesk', sans-serif;
+	text-transform: uppercase;
+	background:$blue;
+	border:2px solid $blue;
+	color:white;
+	padding:14px 40px 12px 40px;
+	border-radius:8px;
+	transition:all 0.3s ease-in;
+
+	a {
+		color:white;
+		transition:all 0.3s ease-in;
+	}
+
+	&:hover {
+		background:white;
+		color:$blue;
+
+		a {
+			color:$blue;
+		}
+	}
+}
+
+.outlined-button {
+	background:white;
+	border:2px solid $brown;
+	color:$brown;
+
+	a {
+		color:$brown;
+	}
+}
+
+.background-image-section {
+	background: no-repeat center center;
+  background-size: cover;
+}
+
+.hero-section {
+	height: 400px;
+
+	.content {
+		height:100%;
+		align-items: center;
+	}
+}
+
+.find-section {
+
+	.content {
+		justify-content: center;
+		padding-bottom:40px;
+	}
+
+	h2 {
+		color: white;
+		text-align: center;
+	}
+
+	.button {
+		background: none;
+		border:1px solid white;
+		color:white;
+		display:flex;
+		padding:20px 12px 18px 10px;
+		margin-top:30px;
+		margin-bottom:20px;
+
+		span {
+			display: block;
+			margin-right:60px;
+		}
+	}
+
+	.find-logo-row {
+		display: flex;
+		align-items: center;
+		justify-content:space-around;
+		width:100%;
+	}
+
+	.single-logo {
+		width:auto;
+		height:auto;
+	}
+}
+
+
+// 1024px And Below
+@media screen and (max-width: 1024px){
+
+	.hero-section {
+		height:300px;
+	}
+}
+
+// 767px And Below
+@media screen and (max-width: 767px){
+
+	.hero-section {
+		height:300px;
+	}
+}

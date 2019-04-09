@@ -1,0 +1,252 @@
+@import "colors";
+
+.about-page {
+
+  .content {
+    padding-top:70px;
+    padding-bottom: 90px;
+  }
+
+  .left-half, .right-half {
+    position: relative;
+  }
+
+  .hero-section {
+
+    h1 {
+      color:white;
+    }
+  }
+
+  h2 {
+    width:calc(100% - 40px);
+    padding-top:30px;
+    border-top:2px solid $brown;
+    margin-bottom:30px;
+  }
+
+  p {
+    margin:0;
+  }
+
+  .button {
+    margin-top:50px;
+    display: inline-block;
+  }
+
+
+  .opening-section {
+
+  }
+
+  .story-section {
+    background:rgba(14, 18, 37, 0.06);
+    height:365px;
+
+    .watermark {
+      position: absolute;
+      top:55px;
+      left:0;
+      height:calc(100% - 50px);
+      margin-left:50%;
+    }
+
+    .food-image {
+      position: absolute;
+      bottom:-61px;
+      right:60px;
+      width:auto;
+      height:500px;
+    }
+  }
+
+  .process-section {
+    height:100%;
+    min-height:450px;
+
+    .content {
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
+
+    .background-image-section {
+      position: absolute;
+      top:0;
+      left:0;
+      width:50%;
+      height:100%;
+    }
+
+    h2 {
+      width:100%;
+    }
+
+    .left-half {
+
+
+    }
+
+    .right-half {
+      padding-top:70px;
+      padding-left:80px;
+      padding-bottom:90px;
+    }
+  }
+
+  .mission-section {
+    background:$blue;
+    color:white;
+    height:440px;
+
+    .watermark {
+      position: absolute;
+      top:50px;
+      height:calc(100% - 50px);
+      right:0;
+      margin-right:50%;
+    }
+
+    h2 {
+      color:white;
+      border-color:white;
+    }
+
+    .right-half {
+      padding-right:50px;
+    }
+  }
+
+  .news-section {
+
+    h2 {
+      width:100%;
+      padding-top:0px;
+      border-top:0px solid $brown;
+      text-align: center;
+      margin-bottom:10px;
+    }
+
+    .news-link {
+      position: relative;
+      font-weight:800;
+      transition:all 0.3s;
+
+      &:after {
+        content:"";
+        position: relative;
+        left:0;
+        display: inline-block;
+        border-right:2px solid $brown;
+        border-top:2px solid $brown;
+        transform:rotate(45deg);
+        transition:all 0.3s;
+        width:10px;
+        height:10px;
+      }
+
+      &:hover {
+
+        &:after {
+          left:-3px;
+        }
+      }
+    }
+
+    .see-all-button {
+      margin-top: 0px;
+      margin-left:auto;
+      margin-right:auto;
+    }
+  }
+}
+
+// 1024px And Below
+@media screen and (max-width: 1024px){
+
+  .about-page {
+
+    .story-section {
+      height: auto;
+
+      .watermark {
+        margin-left:25%;
+      }
+
+      .food-image {
+        right:-100px;
+        bottom:-45px;
+      }
+    }
+
+    .process-section {
+
+      .right-half {
+        padding-left: 40px;
+      }
+    }
+
+    .mission-section {
+      height:auto;
+
+      .watermark {
+        margin-right:20%;
+      }
+    }
+  }
+}
+
+
+// 767px And Below
+@media screen and (max-width: 767px){
+
+  .about-page {
+
+    .story-section {
+      height: auto;
+
+      .content {
+        padding-top:0;
+      }
+
+      .watermark {
+        margin-left: 0%;
+        height: auto;
+        bottom: auto;
+        top: 70px;
+      }
+
+      .food-image {
+        position: relative;
+        height: auto;
+        width: 100%;
+        right: 12px;
+        bottom: 50px;
+        margin-bottom:-50px;
+      }
+    }
+
+    .mission-section {
+      height:auto;
+
+      .watermark {
+        margin-right:0%;
+        height:auto;
+        bottom:0;
+        top:auto;
+      }
+    }
+
+    .process-section {
+
+      .background-image-section {
+        position: relative;
+        height:300px;
+        width:100%;
+      }
+
+      .right-half {
+        padding-left: 0px;
+      }
+    }
+  }
+}
