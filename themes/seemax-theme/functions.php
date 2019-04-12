@@ -228,8 +228,11 @@ add_action('init', 'wpb_custom_new_menu');
 function theme_header_scripts() {
   if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
 
-    // wp_register_script('ScrollMagicGSAP', get_template_directory_uri() . '/js/lib/animation.gsap.min.js', array(), '0.6.0', true);
-    // wp_enqueue_script('ScrollMagicGSAP');
+    wp_register_script('ScrollMagic', get_template_directory_uri() . '/js/lib/ScrollMagic.min.js', array(), '2.0.6', true);
+    wp_enqueue_script('ScrollMagic');
+
+    wp_register_script('ScrollMagicGSAP', get_template_directory_uri() . '/js/lib/animation.gsap.min.js', array(), '2.0.6', true);
+    wp_enqueue_script('ScrollMagicGSAP');
 
     // wp_register_script('attrGSAP', get_template_directory_uri() . '/js/lib/AttrPlugin.min.js', array(), '0.6.0', true);
     // wp_enqueue_script('attrGSAP');
@@ -240,20 +243,20 @@ function theme_header_scripts() {
     // wp_register_script('DrawSVGPlugin', get_template_directory_uri() . '/js/lib/DrawSVGPlugin.min.js', array(), '0.1.3', true);
     // wp_enqueue_script('DrawSVGPlugin');
 
-    // wp_register_script('imagesLoaded', get_template_directory_uri() . '/js/lib/imagesLoaded.js', array(), '4.1.1', true);
-    // wp_enqueue_script('imagesLoaded');
+    wp_register_script('imagesLoaded', get_template_directory_uri() . '/js/lib/imagesLoaded.js', array(), '4.1.1', true);
+    wp_enqueue_script('imagesLoaded');
 
-    // wp_register_script('isotope', get_template_directory_uri() . '/js/lib/isotope.js', array(), '3.0.4', true);
-    //  wp_enqueue_script('isotope'); // Enqueue it!
+    wp_register_script('infinite-scroll', get_template_directory_uri() . '/js/lib/infinite-scroll.js', array(), '3.0.5', true);
+    wp_enqueue_script('infinite-scroll'); // Enqueue it!
+
+    wp_register_script('isotope', get_template_directory_uri() . '/js/lib/isotope.js', array(), '3.0.4', true);
+    wp_enqueue_script('isotope'); // Enqueue it!
 
     // wp_register_script('lightbox', get_template_directory_uri() . '/js/lib/lity.min.js', array(), '', true);
     // wp_enqueue_script('lightbox'); // Enqueue it!
 
     // wp_register_script('MorphSVGPlugin', get_template_directory_uri() . '/js/lib/MorphSVGPlugin.min.js', array(), '', true);
     // wp_enqueue_script('MorphSVGPlugin');
-
-    // wp_register_script('ScrollMagic', get_template_directory_uri() . '/js/lib/ScrollMagic.min.js', array(), '0.6.0', true);
-    // wp_enqueue_script('ScrollMagic');
 
     wp_register_script('slickslider', get_template_directory_uri() . '/js/lib/slick.js', array('jquery'), '1.6.0', true);
     wp_enqueue_script('slickslider');
@@ -405,6 +408,16 @@ if (function_exists('acf_add_options_page')) {
         'icon_url' => 'dashicons-dismiss',
         'position' => 6
     ));
+
+    acf_add_options_page(array(
+        'page_title'    => 'Find Us Bar',
+        'menu_title'    => 'Find Us Bar',
+        'menu_slug'    => 'findusbar',
+        'capability'    => 'edit_posts',
+        'redirect'    => false,
+        'icon_url' => 'dashicons-visibility',
+        'position' => 10
+    ));
 }
     /*  ACF GLOBAL	*/
 
@@ -446,36 +459,50 @@ add_action('init', 'create_post_type');
              'supports' => array('title','editor'),
          )
      );
+
+     register_post_type('recipes',
+     // CPT Options
+         array(
+             'labels' => array(
+                 'name' => __('Recipes'),
+                 'singular_name' => __('Recipe')
+             ),
+             'public' => true,
+             'menu_icon' => 'dashicons-list-view',
+             'has_archive' => false,
+             'supports' => array('title','editor','publicize'),
+         )
+     );
  }
 
 /* 	CPT TAXONOMIES 	*/
 
-// add_action('init', 'add_events_taxonomies');
+add_action('init', 'add_recipes_taxonomies');
 
-// function add_events_taxonomies()
-// {
-//    $labels = array(
-//        'name'            => 'Types',
-//        'singular_name'   => 'Type',
-//        'search_items'    => 'Search Types',
-//        'edit_item'       => 'Edit Type',
-//        'update_item'     => 'Update Type',
-//        'add_new_item'     => 'Add New Type',
-//        'new_item_name'    => 'New Type',
-//        'menu_name'        => 'Type',
-//    );
-//    $args = array(
-//        'labels'            => $labels,
-//        'public'            =>  true,
-//        'hierarchical'      =>  true,
-//        'show_in_nav_menus' =>  true,
-//       	'has_archive'       =>  true,
-//        'show_ui'           =>  true,
-//        'show_admin_column' =>  true,
-//        'rewrite'           =>  array('slug' => 'event-type', 'with_front' => false),
-//    );
-//    register_taxonomy('event-type', array('events'), $args);
-// }
+function add_recipes_taxonomies()
+{
+   $labels = array(
+       'name'            => 'Recipe Types',
+       'singular_name'   => 'Type',
+       'search_items'    => 'Search Types',
+       'edit_item'       => 'Edit Type',
+       'update_item'     => 'Update Type',
+       'add_new_item'     => 'Add New Type',
+       'new_item_name'    => 'New Type',
+       'menu_name'        => 'Type',
+   );
+   $args = array(
+       'labels'            => $labels,
+       'public'            =>  true,
+       'hierarchical'      =>  true,
+       'show_in_nav_menus' =>  true,
+      	'has_archive'       =>  true,
+       'show_ui'           =>  true,
+       'show_admin_column' =>  true,
+       'rewrite'           =>  array('slug' => 'recipe-type', 'with_front' => false),
+   );
+   register_taxonomy('recipe-type', array('recipes'), $args);
+}
 
 
 /*//////////////////////////////*/
@@ -667,3 +694,15 @@ add_action( 'admin_menu', 'remove_menus', 9999);
 
 /*	DISABLE XMLRPC 	*/
 add_filter('xmlrpc_enabled', '__return_false');
+
+
+// Remove Jetpack Sharing and Allow it to be moved
+function jptweak_remove_share() {
+    remove_filter( 'the_content', 'sharing_display', 19 );
+    remove_filter( 'the_excerpt', 'sharing_display', 19 );
+    if ( class_exists( 'Jetpack_Likes' ) ) {
+        remove_filter( 'the_content', array( Jetpack_Likes::init(), 'post_likes' ), 30, 1 );
+    }
+}
+
+add_action( 'loop_start', 'jptweak_remove_share' );

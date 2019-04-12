@@ -25,8 +25,5 @@ style="background: url('<?php echo get_template_directory_uri(); ?>/img/subscrib
 			</div>
 			<!--End mc_embed_signup-->
 		</div>
-    </div>
-
-    <?php the_content(); ?>
   </div>
 </section>

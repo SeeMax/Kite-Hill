@@ -23,8 +23,8 @@
 }
 
 .main-nav {
-	// Width minus logo plus 200 extra space;
-	width:calc(100% - 400px);
+	// Width minus 200px logo plus 100 extra space;
+	width:calc(100% - 300px);
 
 
 	ul {
@@ -186,7 +186,11 @@
 		}
 
 		.menu-item-has-children {
-				margin-bottom:16px;
+			margin-bottom:16px;
+
+			&:after {
+				display: none;
+			}
 		}
 
 		.sub-menu {

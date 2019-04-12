@@ -1,0 +1,88 @@
+@import "colors";
+
+.sharedaddy .sd-content {
+
+  ul {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom:0 !important;
+
+    li {
+      margin:0 0 0 7px !important;
+      padding-top:5px;
+
+      a {
+        margin-top:0px !important;
+        padding:0 !important;
+      }
+    }
+  }
+}
+
+
+li.share-twitter {
+
+  a {
+    background:white !important;
+
+    &:before {
+      top:-7px !important;
+      font-size:16px !important;
+      // line-height: 1.3 !important;
+      color:$brown;
+      // content: ""!important;
+    }
+  }
+}
+
+li.share-facebook {
+
+  a {
+    background:white !important;
+
+    &:before {
+      color:$brown;
+      content: "" !important;
+    }
+  }
+
+  a.sd-button > span{
+    display: inline-block;
+    width:20px;
+    height:20px;
+    background: center / contain no-repeat url('img/facebooklogo.png');
+    background-size: 7px 14px;
+  }
+}
+
+li.share-pinterest {
+
+  a {
+    background:white !important;
+
+    &:before {
+      color:$brown;
+      content: "" !important;
+    }
+  }
+
+  a.sd-button > span{
+    display: inline-block;
+    width:20px;
+    height:20px;
+    background: center / contain no-repeat url('img/pinterestlogo.png');
+    background-size: 13px 13px;
+  }
+}
+
+
+// 1024px And Below
+@media screen and (max-width: 1024px){
+
+}
+
+
+// 767px And Below
+@media screen and (max-width: 767px){
+
+}

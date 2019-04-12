@@ -67,29 +67,7 @@
 		    <?php endif;?>
 		  </div>
 		</section>
-
-		<?php if( have_rows('find_section') ):?>
-			<?php while ( have_rows('find_section') ) : the_row();?>
-
-				<?php $image = get_sub_field('image');?>
-				<section class="find-section background-image-section"
-				style="background-image:url('<?php echo $image[url];?>')">
-					<div class="content">
-
-						<h2>
-							<?php the_sub_field('headline');?>
-						</h2>
-						<div class="button outlined-button">
-							<a class="c-block-fill" href="<?php the_sub_field('button_destination');?>"></a>
-							<span><?php the_sub_field('button_text');?></span>>
-						</div>
-
-
-					</div>
-				</section>
-			<?php endwhile;?>
-		<?php endif;?>
-
+		<?php get_template_part( 'partials/_find-us-bar' ); ?>
 	<?php endwhile; ?>
 </main>
 <?php get_footer(); ?>

@@ -73,7 +73,8 @@ h3 {
 }
 
 h4 {
-
+	font-size:20px;
+	font-weight:400;
 }
 
 h5 {
@@ -133,6 +134,12 @@ hr {
 
 	a {
 		color:$brown;
+	}
+
+	&:hover {
+		background:$brown;
+		border:2px solid white;
+		color:white;
 	}
 }
 
@@ -204,5 +211,24 @@ hr {
 
 	.hero-section {
 		height:300px;
+	}
+
+	.find-section {
+
+		.find-logo-row {
+			display: flex;
+			flex-wrap:wrap;
+			align-items: center;
+			justify-content:space-around;
+			width:100%;
+			margin-top:20px;
+		}
+
+		.single-logo {
+			min-width: 30px;
+			margin:8px 5px;
+			width:auto;
+			height:auto;
+		}
 	}
 }

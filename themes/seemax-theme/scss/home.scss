@@ -112,46 +112,6 @@
     }
   }
 
-  .find-section {
-
-    .content {
-      justify-content: center;
-      padding-bottom:40px;
-    }
-
-    h2 {
-      color: white;
-      text-align: center;
-    }
-
-    .button {
-      background: none;
-      border:1px solid white;
-      color:white;
-      display:flex;
-      padding:20px 12px 18px 10px;
-      margin-top:30px;
-      margin-bottom:20px;
-
-      span {
-        display: block;
-        margin-right:60px;
-      }
-    }
-
-    .find-logo-row {
-      display: flex;
-      align-items: center;
-      justify-content:space-around;
-      width:100%;
-    }
-
-    .single-logo {
-      width:auto;
-      height:auto;
-    }
-  }
-
   .home-video-section {
     position: relative;
     max-height: 500px;
@@ -257,25 +217,6 @@
         bottom:auto;
         top:200px;
         left:-75px;
-      }
-    }
-
-    .find-section {
-
-      .find-logo-row {
-        display: flex;
-        flex-wrap:wrap;
-        align-items: center;
-        justify-content:space-around;
-        width:100%;
-        margin-top:20px;
-      }
-
-      .single-logo {
-        min-width: 30px;
-        margin:8px 5px;
-        width:auto;
-        height:auto;
       }
     }
 

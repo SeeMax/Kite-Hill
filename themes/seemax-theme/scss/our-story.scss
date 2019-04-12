@@ -1,0 +1,164 @@
+@import "colors";
+
+.our-story-page {
+
+  .image-half {
+    position: relative;
+    // direction: rtl;
+
+    img {
+      width:100%;
+    }
+  }
+
+  .words-half {
+    padding-left:4%;
+  }
+}
+
+.story-container {
+
+}
+
+.story-segment {
+  position: relative;
+  width:100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding-bottom:110px;
+}
+
+.story-line {
+  position: absolute;
+  left:calc(50% - 50px);
+  top:5px;
+  height:100%;
+  width:1px;
+}
+
+.segment-date {
+  color:$lightGray;
+  font-weight:800;
+  width:100%;
+  text-align: right;
+  margin-bottom:12px;
+  padding-right:80px;
+}
+
+.date-dot {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #C8C8C8;
+  top: 5px;
+  right: 46px;
+}
+
+.date-number {
+  display: inline-block;
+}
+
+.segment-count {
+  font-size:18px;
+  font-weight:400;
+}
+
+.story-open {
+
+  .story-segment {
+    padding-bottom:30px;
+  }
+
+  h2 {
+    color:$blue;
+    width:80%;
+  }
+}
+
+
+.story-segment-end {
+  padding-bottom: 30px;
+
+  .image-half {
+    text-align: center;
+
+    img {
+      width:auto;
+    }
+  }
+
+  h2, h3 {
+    color:$blue;
+  }
+}
+
+
+// 1024px And Below
+@media screen and (max-width: 1024px){
+
+}
+
+
+// 767px And Below
+@media screen and (max-width: 767px){
+
+  .our-story-page {
+
+    .words-half {
+      margin-top:20px;
+      padding-left:14px;
+    }
+  }
+
+  .story-line {
+    left:0px;
+  }
+
+  .segment-date {
+    color:$lightGray;
+    font-weight:800;
+    width:100%;
+    text-align: left;
+    margin-bottom:12px;
+    padding-right:0px;
+    padding-left:14px;
+    margin-top:-4px;
+  }
+
+  .date-dot {
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #C8C8C8;
+    top: 5px;
+    left:-3px;
+    right:auto;
+  }
+
+  .story-open {
+
+    .story-segment {
+      padding-bottom:30px;
+    }
+
+    .words-half {
+      padding-left:0px;
+    }
+
+    h2 {
+      width:100%;
+    }
+  }
+
+
+  .story-segment-end {
+    padding-bottom: 30px;
+
+    .image-half {
+      text-align: center;
+    }
+  }
+}
