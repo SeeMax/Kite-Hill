@@ -2297,6 +2297,97 @@ li.share-pinterest a.sd-button > span {
   margin-top: 10px;
   padding-top: 10px; }
 
+.filter-button-container {
+  width: 100%; }
+
+.recipe-filter-title {
+  display: inline-block;
+  text-transform: uppercase;
+  margin-right: 55px;
+  white-space: nowrap; }
+
+.no-recipe-results {
+  display: none;
+  width: 100%;
+  padding: 40px 20px;
+  border: 1px solid #5E514D; }
+
+.recipe-filter-button {
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 30px;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease; }
+  .recipe-filter-button:hover {
+    color: #008FDE; }
+
+.active-recipe-filter {
+  color: #008FDE;
+  border-bottom: 2px solid #008FDE; }
+
+.all-recipes-section .content {
+  padding-bottom: 90px; }
+
+.all-recipes-section input[type=text] {
+  -moz-appearance: none;
+  /* older firefox */
+  -webkit-appearance: none;
+  /* safari, chrome, edge and ie mobile */
+  appearance: none;
+  /* rest */
+  -webkit-transition: all 0.30s ease-in-out;
+  transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 12px 15px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #5E514D;
+  border-radius: 15px;
+  font-size: 14px;
+  line-height: 1;
+  color: #5E514D; }
+  .all-recipes-section input[type=text]:focus {
+    border: 1px solid #008FDE; }
+
+.all-recipes-section input[type=text]::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #5E514D; }
+
+.all-recipes-section input[type=text]::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #5E514D; }
+
+.all-recipes-section input[type=text]:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #5E514D; }
+
+.all-recipes-section input[type=text]:-moz-placeholder {
+  /* Firefox 18- */
+  color: #5E514D; }
+
+.load-more-recipes-section {
+  overflow: hidden;
+  width: 100%;
+  text-align: center; }
+
+.load-more-recipes-link {
+  position: relative;
+  margin: 50px auto 0 auto;
+  cursor: pointer; }
+  .load-more-recipes-link:after {
+    content: "";
+    position: relative;
+    left: 10px;
+    top: -3px;
+    display: inline-block;
+    border-right: 2px solid #5E514D;
+    border-bottom: 2px solid #5E514D;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    width: 10px;
+    height: 10px; }
+
 .all-recipes-container, .isotope, .isotope-items-wrap {
   position: relative;
   width: 100%;

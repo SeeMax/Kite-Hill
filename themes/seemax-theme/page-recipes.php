@@ -70,8 +70,39 @@
 			</section>
 			<section class="recipes-section all-recipes-section">
 			   <div class="content">
-					 <h2>All Recipes</h2>
-					<div class="all-recipes-container grid are-images-unloaded">
+					 <div class="filter-button-container">
+						 <div class="recipe-filter-title">
+							 BY CATEGORY
+						 </div>
+						 <div class="recipe-filter-button all-recipe-button active-recipe-filter">
+							All
+						 </div>
+						<!-- Get All The Taxonomies and Load them here using each as title and as filter -->
+						<?php $args=array(
+  						'public'   => true,
+  						'_builtin' => false
+						);?>
+						<?php $output = 'names';?>
+						<?php	$operator = 'and';?>
+						<?php $taxonomies=get_taxonomies($args,$output,$operator);?>
+						<?php if  ($taxonomies):?>
+						  <?php foreach ($taxonomies  as $taxonomy ): $terms = get_terms($taxonomy);?>
+						  	<?php foreach ( $terms as $term):?>
+									<?php $allLowerTerm = strtolower($term->name);?>
+									<?php $allLowerTerm = str_replace(' ', '_', $allLowerTerm);?>
+									<div class="recipe-filter-button recipeFilterTaxonomy" data-filter-name="<?php echo $allLowerTerm;?>">
+										<?php echo $term->name; ?>
+									</div>
+								<?php endforeach;?>
+							<?php endforeach;?>
+						<?php endif;?>
+
+					 </div>
+					 <p><input type="text" class="quicksearch" placeholder="SEARCH" /></p>
+					 <div class="no-recipe-results noRecipeResults">
+						<h2>No recipes match your search.</h2>
+					 </div>
+					<div class="all-recipes-container">
 						<?php
 						$args = array(
 						'orderby' => 'ASC',
@@ -83,8 +114,10 @@
 							<?php if( have_rows('recipe_image') ):?>
 								<?php while ( have_rows('recipe_image') ) : the_row();?>
 									<?php $backgroundImage = get_sub_field('image');?>
-									<div class="grid__item single-all-recipe c-width-23 background-image-section"
-										style="background: url('<?php echo $backgroundImage[url];?>') center center no-repeat;background-size:cover;">
+									<?php $terms = get_the_terms( get_the_ID(), 'recipe-type' );?>
+									<div class="single-all-recipe c-width-23 background-image-section lazy <?php if ( $terms && ! is_wp_error( $terms ) ):?><?php foreach ( $terms as $term ):?><?php $allLowerTerm = strtolower($term->name);?><?php $allLowerTerm = str_replace(' ', '_', $allLowerTerm);?><?php echo $allLowerTerm;?> <?php endforeach; ?><?php endif;?>"
+										data-bg="url(<?php echo $backgroundImage[url];?>)"
+										style="background:center center no-repeat;background-size:cover;">
 								<?php endwhile;?>
 							<?php endif;?>
 								<div class="single-all-main-content">
@@ -94,9 +127,11 @@
 							</div>
 						<?php endwhile; else: ?> <p>Sorry, there are no posts to display</p> <?php endif; ?>
 						<?php wp_reset_query(); ?>
-						<p class="pagination">
-						  <a class="pagination__next" href="page2.html">Next page</a>
-						</p>
+					</div>
+					<div class="load-more-recipes-section loadMoreRecipesSection">
+						<div class="load-more-recipes-link loadMoreRecipes">
+							Load More
+						</div>
 					</div>
 				</div>
 			</section>
