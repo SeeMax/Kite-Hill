@@ -1,5 +1,5 @@
 <?php /* Template Name: Our Story */ get_header(); ?>
-	<main class="default-page">
+	<main class="our-story-page">
 		<?php while (have_posts()) : the_post(); ?>
 
 			<?php if( have_rows('hero_section') ):?>

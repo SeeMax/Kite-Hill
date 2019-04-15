@@ -2,6 +2,13 @@
 
 .recipes-page {
 
+  .page-intro-section {
+
+    .content {
+      padding-top:70px;
+      padding-bottom:60px;
+    }
+  }
 }
 
 .recipes-section {
@@ -13,9 +20,12 @@
 
 .recent-recipes-section {
   background: $offWhite;
+  margin-top: 200px;
+  margin-bottom:-200px;
 
   .content {
-    padding-bottom:60px;
+    padding-bottom:70px;
+    transform: translateY(-200px);
   }
 }
 
@@ -67,44 +77,12 @@
   padding-top:10px;
 }
 
-.filter-button-container {
-  width:100%;
-}
-
-.recipe-filter-title {
-  display: inline-block;
-  text-transform: uppercase;
-  margin-right:55px;
-  white-space: nowrap;
-}
-
-.no-recipe-results {
-  display: none;
-  width:100%;
-  padding:40px 20px;
-  border:1px solid $brown;
-}
-
-.recipe-filter-button {
-  cursor: pointer;
-  display: inline-block;
-  margin-right:30px;
-  transition:color 0.3s ease;
-
-  &:hover {
-    color:$blue;
-  }
-}
-
-.active-recipe-filter {
-  color:$blue;
-  border-bottom:2px solid $blue;
-}
-
 .all-recipes-section {
+  background: white;
 
   .content {
     padding-bottom: 90px;
+    padding-top:70px;
   }
 
   input[type=text] {
@@ -144,6 +122,40 @@
 
 
 }
+
+.filters-container {
+  width:100%;
+  display: flex;
+}
+
+.recipe-filter-title {
+  display: inline-block;
+  text-transform: uppercase;
+  margin-right:55px;
+  white-space: nowrap;
+}
+
+.recipe-filter-button-container {
+  flex:1;
+}
+
+.recipe-filter-button {
+  cursor: pointer;
+  display: inline-block;
+  margin-right:30px;
+  margin-bottom:5px;
+  transition:color 0.3s ease;
+
+  &:hover {
+    color:$blue;
+  }
+}
+
+.active-recipe-filter {
+  color:$blue;
+  border-bottom:2px solid $blue;
+}
+
 
 .load-more-recipes-section {
   overflow: hidden;
@@ -229,13 +241,61 @@
   }
 }
 
+.no-recipe-results {
+  display: none;
+  width:100%;
+  padding:40px 20px;
+  border:1px solid $brown;
+}
+
 // 1024px And Below
 @media screen and (max-width: 1024px){
 
+  .recent-recipe-image {
+    height:240px;
+  }
+
+  .single-all-recipe {
+    height:160px;
+  }
 }
 
 
 // 767px And Below
 @media screen and (max-width: 767px){
 
+  .single-recent-recipe {
+    margin-bottom:50px;
+  }
+
+  .recent-recipe-image {
+    height:240px;
+  }
+
+  .filters-container {
+    flex-wrap:wrap;
+  }
+
+  .recipe-filter-title {
+    width:100%;
+  }
+
+  .recipe-filter-button-container {
+    width:100%;
+    margin-top:10px;
+  }
+
+  .single-all-recipe {
+    display: flex;
+    align-items: flex-end;
+    height:300px;
+    // margin-bottom:100px;
+  }
+
+  .single-all-main-content {
+    opacity:1;
+    position: relative;
+    height:auto;
+
+  }
 }

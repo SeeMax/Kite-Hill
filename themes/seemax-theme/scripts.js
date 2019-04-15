@@ -180,6 +180,7 @@ $(window).on('load', function() {
 		setupTL.set($('.segmentActor h2'), {rotationX:20,y:-3,opacity:0,transformOrigin:'left top'});
 		setupTL.set($('.segmentActor h3'), {rotationX:20,y:-3,opacity:0,transformOrigin:'left top'});
 		setupTL.set($('.segmentActor p'), {rotationX:20,y:-3,opacity:0,transformOrigin:'center top'});
+		setupTL.set($('.story-segment'), {opacity:1});
 
 		$('.story-segment').each(function(){
 

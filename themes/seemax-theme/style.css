@@ -1885,6 +1885,7 @@ li.share-pinterest a.sd-button > span {
   padding-left: 4%; }
 
 .story-segment {
+  opacity: 0;
   position: relative;
   width: 100%;
   display: -webkit-box;
@@ -2249,13 +2250,21 @@ li.share-pinterest a.sd-button > span {
   .products-page .image-half {
     margin-bottom: 30px; } }
 
+.recipes-page .page-intro-section .content {
+  padding-top: 70px;
+  padding-bottom: 60px; }
+
 .recipes-section h2 {
   text-align: center; }
 
 .recent-recipes-section {
-  background: #f2f3f4; }
+  background: #f2f3f4;
+  margin-top: 200px;
+  margin-bottom: -200px; }
   .recent-recipes-section .content {
-    padding-bottom: 60px; }
+    padding-bottom: 70px;
+    -webkit-transform: translateY(-200px);
+            transform: translateY(-200px); }
 
 .single-recent-recipe {
   position: relative;
@@ -2297,8 +2306,48 @@ li.share-pinterest a.sd-button > span {
   margin-top: 10px;
   padding-top: 10px; }
 
-.filter-button-container {
-  width: 100%; }
+.all-recipes-section {
+  background: white; }
+  .all-recipes-section .content {
+    padding-bottom: 90px;
+    padding-top: 70px; }
+  .all-recipes-section input[type=text] {
+    -moz-appearance: none;
+    /* older firefox */
+    -webkit-appearance: none;
+    /* safari, chrome, edge and ie mobile */
+    appearance: none;
+    /* rest */
+    -webkit-transition: all 0.30s ease-in-out;
+    transition: all 0.30s ease-in-out;
+    outline: none;
+    padding: 12px 15px;
+    margin: 5px 1px 3px 0px;
+    border: 1px solid #5E514D;
+    border-radius: 15px;
+    font-size: 14px;
+    line-height: 1;
+    color: #5E514D; }
+    .all-recipes-section input[type=text]:focus {
+      border: 1px solid #008FDE; }
+  .all-recipes-section input[type=text]::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #5E514D; }
+  .all-recipes-section input[type=text]::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #5E514D; }
+  .all-recipes-section input[type=text]:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #5E514D; }
+  .all-recipes-section input[type=text]:-moz-placeholder {
+    /* Firefox 18- */
+    color: #5E514D; }
+
+.filters-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
 
 .recipe-filter-title {
   display: inline-block;
@@ -2306,16 +2355,16 @@ li.share-pinterest a.sd-button > span {
   margin-right: 55px;
   white-space: nowrap; }
 
-.no-recipe-results {
-  display: none;
-  width: 100%;
-  padding: 40px 20px;
-  border: 1px solid #5E514D; }
+.recipe-filter-button-container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1; }
 
 .recipe-filter-button {
   cursor: pointer;
   display: inline-block;
   margin-right: 30px;
+  margin-bottom: 5px;
   -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease; }
   .recipe-filter-button:hover {
@@ -2324,45 +2373,6 @@ li.share-pinterest a.sd-button > span {
 .active-recipe-filter {
   color: #008FDE;
   border-bottom: 2px solid #008FDE; }
-
-.all-recipes-section .content {
-  padding-bottom: 90px; }
-
-.all-recipes-section input[type=text] {
-  -moz-appearance: none;
-  /* older firefox */
-  -webkit-appearance: none;
-  /* safari, chrome, edge and ie mobile */
-  appearance: none;
-  /* rest */
-  -webkit-transition: all 0.30s ease-in-out;
-  transition: all 0.30s ease-in-out;
-  outline: none;
-  padding: 12px 15px;
-  margin: 5px 1px 3px 0px;
-  border: 1px solid #5E514D;
-  border-radius: 15px;
-  font-size: 14px;
-  line-height: 1;
-  color: #5E514D; }
-  .all-recipes-section input[type=text]:focus {
-    border: 1px solid #008FDE; }
-
-.all-recipes-section input[type=text]::-webkit-input-placeholder {
-  /* Chrome/Opera/Safari */
-  color: #5E514D; }
-
-.all-recipes-section input[type=text]::-moz-placeholder {
-  /* Firefox 19+ */
-  color: #5E514D; }
-
-.all-recipes-section input[type=text]:-ms-input-placeholder {
-  /* IE 10+ */
-  color: #5E514D; }
-
-.all-recipes-section input[type=text]:-moz-placeholder {
-  /* Firefox 18- */
-  color: #5E514D; }
 
 .load-more-recipes-section {
   overflow: hidden;
@@ -2422,6 +2432,44 @@ li.share-pinterest a.sd-button > span {
   opacity: 0; }
   .single-all-main-content:hover {
     opacity: 1; }
+
+.no-recipe-results {
+  display: none;
+  width: 100%;
+  padding: 40px 20px;
+  border: 1px solid #5E514D; }
+
+@media screen and (max-width: 1024px) {
+  .recent-recipe-image {
+    height: 240px; }
+  .single-all-recipe {
+    height: 160px; } }
+
+@media screen and (max-width: 767px) {
+  .single-recent-recipe {
+    margin-bottom: 50px; }
+  .recent-recipe-image {
+    height: 240px; }
+  .filters-container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+  .recipe-filter-title {
+    width: 100%; }
+  .recipe-filter-button-container {
+    width: 100%;
+    margin-top: 10px; }
+  .single-all-recipe {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    height: 300px; }
+  .single-all-main-content {
+    opacity: 1;
+    position: relative;
+    height: auto; } }
 
 .single-recipe-page {
   background: #f2f3f4; }

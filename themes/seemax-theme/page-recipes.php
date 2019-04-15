@@ -70,33 +70,31 @@
 			</section>
 			<section class="recipes-section all-recipes-section">
 			   <div class="content">
-					 <div class="filter-button-container">
+					 <div class="filters-container">
 						 <div class="recipe-filter-title">
 							 BY CATEGORY
 						 </div>
-						 <div class="recipe-filter-button all-recipe-button active-recipe-filter">
-							All
+						 <div class="recipe-filter-button-container">
+							 <div class="recipe-filter-button all-recipe-button active-recipe-filter">
+							 All
+							 </div>
+							 <!-- Get All The Taxonomies and Load them here using each as title and as filter -->
+							 <?php $args=array('public'   => true,'_builtin' => false);?>
+							 <?php $output = 'names';?>
+							 <?php	$operator = 'and';?>
+							 <?php $taxonomies=get_taxonomies($args,$output,$operator);?>
+							 <?php if  ($taxonomies):?>
+								 <?php foreach ($taxonomies  as $taxonomy ): $terms = get_terms($taxonomy);?>
+									 <?php foreach ( $terms as $term):?>
+										 <?php $allLowerTerm = strtolower($term->name);?>
+										 <?php $allLowerTerm = str_replace(' ', '_', $allLowerTerm);?>
+										 <div class="recipe-filter-button recipeFilterTaxonomy" data-filter-name="<?php echo $allLowerTerm;?>">
+										 	<?php echo $term->name; ?>
+										 </div>
+									 <?php endforeach;?>
+								 <?php endforeach;?>
+							 <?php endif;?>
 						 </div>
-						<!-- Get All The Taxonomies and Load them here using each as title and as filter -->
-						<?php $args=array(
-  						'public'   => true,
-  						'_builtin' => false
-						);?>
-						<?php $output = 'names';?>
-						<?php	$operator = 'and';?>
-						<?php $taxonomies=get_taxonomies($args,$output,$operator);?>
-						<?php if  ($taxonomies):?>
-						  <?php foreach ($taxonomies  as $taxonomy ): $terms = get_terms($taxonomy);?>
-						  	<?php foreach ( $terms as $term):?>
-									<?php $allLowerTerm = strtolower($term->name);?>
-									<?php $allLowerTerm = str_replace(' ', '_', $allLowerTerm);?>
-									<div class="recipe-filter-button recipeFilterTaxonomy" data-filter-name="<?php echo $allLowerTerm;?>">
-										<?php echo $term->name; ?>
-									</div>
-								<?php endforeach;?>
-							<?php endforeach;?>
-						<?php endif;?>
-
 					 </div>
 					 <p><input type="text" class="quicksearch" placeholder="SEARCH" /></p>
 					 <div class="no-recipe-results noRecipeResults">
