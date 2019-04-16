@@ -28,7 +28,7 @@
 		</section>
 		<?php if( have_rows('explore_section') ):?>
 			<?php while ( have_rows('explore_section') ) : the_row();?>
-				<section class="explore-section">
+				<section class="explore-almonds-section">
 					<div class="water-mark c-width-50">
 						<img src="<?php echo get_template_directory_uri(); ?>/img/watermark.png" />
 					</div>
@@ -52,7 +52,70 @@
 				</section>
 			<?php endwhile;?>
 		<?php endif;?>
-
+		<section class="home-video-section">
+			<div style="padding:56.25% 0 0 0;position:relative;">
+				<iframe
+					src="https://player.vimeo.com/video/<?php the_field('home_video_section');?>?background=1&color=ffffff&title=0&byline=0&portrait=0&badge=0"
+					style="position:absolute;top:0;left:0;width:100%;height:100%;"
+					frameborder="0"
+					webkitallowfullscreen
+					mozallowfullscreen
+					allowfullscreen >
+				</iframe>
+			</div>
+			<script src="https://player.vimeo.com/api/player.js"></script>
+		</section>
+		<section class="explore-category-section">
+			<div class="content">
+				<h2>Explore by Category</h2>
+				<?php if( have_rows('explore_category_section') ):?>
+					<?php while ( have_rows('explore_category_section') ) : the_row();?>
+						<div class="single-explore-category c-width-25">
+							<?php $image = get_sub_field('image');?>
+							<img src="<?php echo $image['url'];?>">
+							<div class="explore-recipe-title">
+								<h4><?php the_sub_field('title');?></h4>
+							</div>
+							<a class="c-block-fill" href="<?php the_sub_field('destination');?>"></a>
+						</div>
+					<?php endwhile;?>
+				<?php endif;?>
+				<div class="explore-products-all-button">
+					<div class="button">
+						<a class="c-block-fill" href="/our-food/"></a>
+						SEE ALL PRODUCTS
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="internal-links-section">
+			<div class="content">
+				<?php if( have_rows('about_us_link') ):?>
+					<?php while ( have_rows('about_us_link') ) : the_row();?>
+						<div class="single-internal-link c-width-50">
+							<?php $image = get_sub_field('image');?>
+							<img src="<?php echo $image['url'];?>">
+							<div class="internal-title">
+								<h2><?php the_sub_field('title');?></h2>
+								<a class="c-block-fill" href="<?php the_sub_field('destination');?>"></a>
+							</div>
+						</div>
+					<?php endwhile;?>
+				<?php endif;?>
+				<?php if( have_rows('our_recipes_link') ):?>
+					<?php while ( have_rows('our_recipes_link') ) : the_row();?>
+						<div class="single-internal-link c-width-50">
+							<?php $image = get_sub_field('image');?>
+							<img src="<?php echo $image['url'];?>">
+							<div class="internal-title">
+								<h2><?php the_sub_field('title');?></h2>
+								<a class="c-block-fill" href="<?php the_sub_field('destination');?>"></a>
+							</div>
+						</div>
+					<?php endwhile;?>
+				<?php endif;?>
+			</div>
+		</section>
 		<?php if( have_rows('find_section') ):?>
 			<?php while ( have_rows('find_section') ) : the_row();?>
 
@@ -83,25 +146,6 @@
 				</section>
 			<?php endwhile;?>
 		<?php endif;?>
-
-		<section class="home-video-section">
-			<div style="padding:56.25% 0 0 0;position:relative;">
-				<iframe
-					src="https://player.vimeo.com/video/<?php the_field('home_video_section');?>?background=1&color=ffffff&title=0&byline=0&portrait=0&badge=0" 
-					style="position:absolute;top:0;left:0;width:100%;height:100%;"
-					frameborder="0"
-					webkitallowfullscreen
-					mozallowfullscreen
-					allowfullscreen >
-				</iframe>
-			</div>
-			<script src="https://player.vimeo.com/api/player.js"></script>
-
-
-
-
-
-		</section>
 
 		<?php if( have_rows('insta_section') ):?>
 			<?php while ( have_rows('insta_section') ) : the_row();?>

@@ -1606,34 +1606,132 @@ hr {
 .home-page .subhead-section .content {
   padding-top: 80px; }
 
-.home-page .explore-section .words-half {
+.home-page .explore-almonds-section .words-half {
   position: relative;
   padding-top: 25px;
   padding-bottom: 160px; }
-  .home-page .explore-section .words-half h2 {
+  .home-page .explore-almonds-section .words-half h2 {
     margin-bottom: 30px; }
-  .home-page .explore-section .words-half p {
+  .home-page .explore-almonds-section .words-half p {
     width: 100%; }
-  .home-page .explore-section .words-half .button {
+  .home-page .explore-almonds-section .words-half .button {
     display: inline-block;
     margin-top: 45px; }
 
-.home-page .explore-section hr {
+.home-page .explore-almonds-section hr {
   margin-bottom: 35px;
   width: 80%; }
 
-.home-page .explore-section .image-half {
+.home-page .explore-almonds-section .image-half {
   position: relative; }
-  .home-page .explore-section .image-half img {
+  .home-page .explore-almonds-section .image-half img {
     position: absolute;
     left: 50px;
     top: 0;
     max-width: 200%; }
 
-.home-page .explore-section .water-mark {
+.home-page .explore-almonds-section .water-mark {
   position: absolute;
   bottom: -60px;
   left: -75px; }
+
+.home-page .explore-category-section .content {
+  max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.home-page .explore-category-section h2 {
+  text-align: center;
+  margin-bottom: 50px; }
+
+.home-page .single-explore-category {
+  position: relative;
+  overflow: hidden;
+  height: 0px;
+  padding-top: 20%; }
+  .home-page .single-explore-category img {
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: auto;
+    width: 100%; }
+  .home-page .single-explore-category .explore-recipe-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding: 10px 20px; }
+    .home-page .single-explore-category .explore-recipe-title h4 {
+      display: inline-block;
+      width: auto;
+      text-align: center;
+      color: #008FDE;
+      border-top: 1px solid #008FDE;
+      padding-top: 10px;
+      margin-bottom: 0px;
+      opacity: 0;
+      -webkit-transition: all .3s ease;
+      transition: all .3s ease; }
+  .home-page .single-explore-category:hover img {
+    top: -35px; }
+  .home-page .single-explore-category:hover .explore-recipe-title h4 {
+    opacity: 1;
+    -webkit-transform: translateY(-25px);
+            transform: translateY(-25px); }
+
+.home-page .explore-products-all-button {
+  width: 100%;
+  text-align: center; }
+  .home-page .explore-products-all-button .button {
+    margin: 26px 0 6px 0;
+    display: inline-block; }
+
+.home-page .internal-links-section .content {
+  max-width: 100%;
+  padding: 0; }
+
+.home-page .single-internal-link {
+  position: relative;
+  overflow: hidden; }
+  .home-page .single-internal-link img {
+    width: 100%;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease; }
+  .home-page .single-internal-link .internal-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    padding: 65px 10%; }
+  .home-page .single-internal-link h2 {
+    display: inline-block;
+    width: auto;
+    color: white;
+    border-top: 2px solid white;
+    padding-top: 20px; }
+  .home-page .single-internal-link:hover img {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05); }
 
 .home-page .home-video-section {
   position: relative;
@@ -1669,7 +1767,13 @@ hr {
 
 @media screen and (max-width: 1024px) {
   .home-page .home-video-section {
-    height: 400px; } }
+    height: 400px; }
+  .home-page .single-explore-category {
+    padding-top: 26%; }
+    .home-page .single-explore-category .explore-recipe-title h4 {
+      -webkit-transform: translateY(-27px);
+              transform: translateY(-27px);
+      opacity: 1; } }
 
 @media screen and (max-width: 767px) {
   .home-page .home-hero-slide .content {
@@ -1691,19 +1795,26 @@ hr {
   .home-page .subhead-section .content {
     padding-top: 60px;
     padding-bottom: 10px; }
-  .home-page .explore-section .image-half {
+  .home-page .explore-almonds-section .image-half {
     margin-top: 30px; }
-    .home-page .explore-section .image-half img {
+    .home-page .explore-almonds-section .image-half img {
       position: relative;
       left: 0px;
       max-width: 100%; }
-  .home-page .explore-section .words-half {
+  .home-page .explore-almonds-section .words-half {
     padding-bottom: 20px; }
-  .home-page .explore-section .water-mark {
+  .home-page .explore-almonds-section .water-mark {
     position: absolute;
     bottom: auto;
     top: 200px;
     left: -75px; }
+  .home-page .single-explore-category {
+    padding-top: 91%; }
+    .home-page .single-explore-category .explore-recipe-title h4 {
+      -webkit-transform: translateY(-37px);
+              transform: translateY(-37px); }
+  .home-page .single-internal-link .internal-title {
+    padding: 35px 10%; }
   .home-page .home-video-section {
     height: 208px; } }
 
