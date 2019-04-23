@@ -34,29 +34,81 @@
             <h1><?php the_title();?></h1>
             <p><?php the_content();?></p>
           </div>
-          <div class="single-recipe-ingredients c-width-45">
-            Ingredients
-            <?php if( have_rows('ingredients_list') ):?>
-              <?php while ( have_rows('ingredients_list') ) : the_row();?>
-                <div class="single-recipe-single-ingredient">
-                  <?php the_sub_field('single_ingredient');?>
-                </div>
-              <?php endwhile;?>
-            <?php endif;?>
-          </div>
-          <div class="single-recipe-steps c-width-55">
-            Method
-            <?php if( have_rows('method_steps') ): $counter = 1;?>
-              <?php while ( have_rows('method_steps') ) : the_row();?>
-                <div class="single-recipe-single-step">
-                  <div class="step-number">
-                    Step <?php echo $counter;?>.
-                  </div>
-                  <?php the_sub_field('single_step');?>
-                </div>
-              <?php $counter++; endwhile;?>
-            <?php endif;?>
-          </div>
+					<div class="ingredient-method-group">
+	          <div class="single-recipe-ingredients c-width-45">
+	            Ingredients
+	            <?php if( have_rows('ingredients_list') ):?>
+	              <?php while ( have_rows('ingredients_list') ) : the_row();?>
+	                <div class="single-recipe-single-ingredient">
+	                  <?php the_sub_field('single_ingredient');?>
+	                </div>
+	              <?php endwhile;?>
+	            <?php endif;?>
+	          </div>
+	          <div class="single-recipe-steps c-width-55">
+	            Method
+	            <?php if( have_rows('method_steps') ): $counter = 1;?>
+	              <?php while ( have_rows('method_steps') ) : the_row();?>
+	                <div class="single-recipe-single-step">
+	                  <div class="step-number">
+	                    Step <?php echo $counter;?>.
+	                  </div>
+	                  <?php the_sub_field('single_step');?>
+	                </div>
+	              <?php $counter++; endwhile;?>
+	            <?php endif;?>
+	          </div>
+					</div>
+					<div class="ingredient-method-group">
+
+						<?php if( have_rows('extra_ingredients_lists') ):?>
+							<?php while ( have_rows('extra_ingredients_lists') ) : the_row();?>
+								<?php if( have_rows('one_extra_ingredient_list') ):?>
+									<?php while ( have_rows('one_extra_ingredient_list') ) : the_row();?>
+
+										<div class="single-recipe-ingredients c-width-45">
+											Title
+											<?php the_sub_field('one_ingredient_list_title');?>
+											<?php if( have_rows('extra_list_ingredient_list') ):?>
+												<?php while ( have_rows('extra_list_ingredient_list') ) : the_row();?>
+													<div class="single-recipe-single-ingredient">
+														<?php the_sub_field('extra_single_ingredient');?>
+													</div>
+												<?php endwhile;?>
+											<?php endif;?>
+										</div>
+
+									<?php endwhile;?>
+								<?php endif;?>
+							<?php endwhile;?>
+						<?php endif;?>
+						<?php if( have_rows('extra_method_lists') ):?>
+						  <?php while ( have_rows('extra_method_lists') ) : the_row();?>
+
+						    <?php if( have_rows('one_extra_method_list') ):?>
+						      <?php while ( have_rows('one_extra_method_list') ) : the_row();?>
+
+										<div class="single-recipe-steps c-width-55">
+						        	<?php the_sub_field('one_method_list_title');?>
+											<?php if( have_rows('extra_list_method_list') ): $counter = 1;?>
+							          <?php while ( have_rows('extra_list_method_list') ) : the_row();?>
+
+					                <div class="single-recipe-single-step">
+					                  <div class="step-number">
+					                    Step <?php echo $counter;?>.
+					                  </div>
+					                  <?php the_sub_field('extra_single_step');?>
+					                </div>
+
+						             <?php $counter++; endwhile;?>
+						           <?php endif;?>
+						         </div>
+
+									<?php endwhile;?>
+								<?php endif;?>
+							<?php endwhile;?>
+						<?php endif;?>
+					</div>
           <div class="single-recipe-products-used">
             <?php if( have_rows('product_used_area') ):?>
               <?php while ( have_rows('product_used_area') ) : the_row();?>

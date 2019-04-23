@@ -60,6 +60,14 @@
   }
 }
 
+.ingredient-method-group {
+  display: flex;
+  flex-wrap:wrap;
+  width:100%;
+  height:auto;
+  border-bottom: 1px solid $lightGray;
+}
+
 .single-recipe-ingredients {
   padding:40px 3.5% 50px 7%;
   border-right: 1px solid $lightGray;
@@ -91,7 +99,7 @@
 .single-recipe-products-used {
   display: flex;
   flex-wrap: wrap;
-  border-top: 1px solid $lightGray;
+  // border-top: 1px solid $lightGray;
 
   .bold-hthree {
     font-weight:800;

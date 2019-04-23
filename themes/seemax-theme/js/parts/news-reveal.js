@@ -3,6 +3,8 @@ function newsHide() {
 			moreNews = $(".moreNews"),
 			fullHeight = moreNews.height();
 
+			console.log(fullHeight);
+
 	tl.set(moreNews, {height:0});
 
 	$(".showMoreNews").on('click', function() {

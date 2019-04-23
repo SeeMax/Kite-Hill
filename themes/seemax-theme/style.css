@@ -1278,6 +1278,8 @@ hr {
   .footer i {
     font-size: 30px;
     margin-right: 20px; }
+  .footer .current-menu-item a {
+    color: white; }
   .footer .footer-tile {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2631,6 +2633,16 @@ li.share-pinterest a.sd-button > span {
     .single-recipe-intro .recipe-categories:nth-of-type(1):before {
       display: none; }
 
+.ingredient-method-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #C8C8C8; }
+
 .single-recipe-ingredients {
   padding: 40px 3.5% 50px 7%;
   border-right: 1px solid #C8C8C8; }
@@ -2657,8 +2669,7 @@ li.share-pinterest a.sd-button > span {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  border-top: 1px solid #C8C8C8; }
+      flex-wrap: wrap; }
   .single-recipe-products-used .bold-hthree {
     font-weight: 800;
     margin-top: 45px; }
