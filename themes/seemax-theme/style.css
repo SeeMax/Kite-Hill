@@ -2046,6 +2046,7 @@ li.share-pinterest a.sd-button > span {
   display: inline-block; }
 
 .segment-count {
+  display: none;
   font-size: 18px;
   font-weight: 400; }
 
