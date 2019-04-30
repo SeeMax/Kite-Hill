@@ -1645,6 +1645,7 @@ hr {
   left: -75px; }
 
 .home-page .explore-category-section .content {
+  padding-bottom: 0px;
   max-width: 100%;
   padding-left: 0;
   padding-right: 0;
@@ -1702,6 +1703,7 @@ hr {
             transform: translateY(-25px); }
 
 .home-page .explore-products-all-button {
+  display: none;
   width: 100%;
   text-align: center; }
   .home-page .explore-products-all-button .button {
@@ -2003,6 +2005,9 @@ li.share-pinterest a.sd-button > span {
 
 .our-story-page .words-half {
   padding-left: 4%; }
+
+.story-container .story-segment .words-half {
+  margin-top: 35px; }
 
 .story-segment {
   opacity: 0;
