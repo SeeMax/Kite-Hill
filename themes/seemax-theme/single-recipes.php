@@ -67,7 +67,6 @@
 									<?php while ( have_rows('one_extra_ingredient_list') ) : the_row();?>
 
 										<div class="single-recipe-ingredients c-width-45">
-											Title
 											<?php the_sub_field('one_ingredient_list_title');?>
 											<?php if( have_rows('extra_list_ingredient_list') ):?>
 												<?php while ( have_rows('extra_list_ingredient_list') ) : the_row();?>

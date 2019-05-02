@@ -2626,6 +2626,7 @@ li.share-pinterest a.sd-button > span {
   margin-left: 30px; }
 
 .single-recipe-intro {
+  width: 100%;
   border-bottom: 1px solid #C8C8C8;
   padding: 8px 7% 70px 7%; }
   .single-recipe-intro .recipe-categories {
