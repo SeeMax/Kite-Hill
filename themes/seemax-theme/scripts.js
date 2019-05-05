@@ -148,7 +148,7 @@ function newsHide() {
 			moreNews = $(".moreNews"),
 			fullHeight = moreNews.height();
 
-			console.log(fullHeight);
+			// console.log(fullHeight);
 
 	tl.set(moreNews, {height:0});
 

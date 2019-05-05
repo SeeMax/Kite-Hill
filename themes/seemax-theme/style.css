@@ -359,6 +359,9 @@ hr {
     width: auto;
     height: auto; } }
 
+.explore-category-section, .internal-links-section {
+  display: none; }
+
 .four-oh-four-page .content {
   padding: 45px 25px 85px 25px; }
 
