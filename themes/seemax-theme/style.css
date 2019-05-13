@@ -2308,6 +2308,23 @@ li.share-pinterest a.sd-button > span {
     width: 100%; }
     .products-page .single-product .ingredients span, .products-page .single-product .sizes span {
       font-weight: 800; }
+  .products-page .single-product .health-logos {
+    margin-top: 14px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+    .products-page .single-product .health-logos img {
+      width: auto;
+      height: 40px;
+      margin-right: 14px; }
+    .products-page .single-product .health-logos .img2 {
+      height: 44px;
+      margin-top: -2px; }
   .products-page .single-product .ingredients {
     font-size: 18px; }
   .products-page .single-product .size-disc {

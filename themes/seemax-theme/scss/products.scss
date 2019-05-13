@@ -88,6 +88,28 @@
       }
     }
 
+    .health-logos {
+      margin-top:14px;
+      display:flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+
+      img {
+        width:auto;
+        height:40px;
+        margin-right:14px;
+      }
+
+      .img2 {
+        height:44px;
+        margin-top:-2px;
+      }
+
+      .img2 {
+
+      }
+    }
+
     .ingredients {
       font-size:18px;
     }

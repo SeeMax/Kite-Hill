@@ -55,12 +55,12 @@
 					</a>
 				</h3>
 
-				<h3>
+				<!-- <h3>
 					or give us a call at
 					<a class="thick-brown" href="tel:<?php the_field('phone_number', 'options');?>">
 						<?php the_field('phone_number', 'options');?>
 					</a>
-				</h3>
+				</h3> -->
 			</div>
 		</section>
 

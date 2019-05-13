@@ -22,14 +22,14 @@
 					<?php echo do_shortcode('[contact-form-7 id="185" title="Contact Page Form"]');?>
 				</div>
 				<div class="contact-links-half c-width-40">
-					<div class="contact-links-part">
+					<!-- <div class="contact-links-part">
 						<?php if( have_rows('phone_area') ):?>
 							<?php while ( have_rows('phone_area') ) : the_row();?>
 								<h2>Phone</h2>
 								<a class="phone-link" href="tel:<?php the_sub_field('phone_number');?>"><?php the_sub_field('phone_number');?></a>
 							<?php endwhile;?>
 						<?php endif;?>
-					</div>
+					</div> -->
 					<div class="contact-links-part">
 						<?php if( have_rows('email_area') ):?>
 						  <?php while ( have_rows('email_area') ) : the_row();?>

@@ -272,7 +272,7 @@ function theme_header_scripts() {
     wp_enqueue_script('Tweenmax');
 
     // ENQUEUE COMPILED SCRIPTS
-    wp_register_script('themescripts', get_template_directory_uri() . '/scripts.js', array('jquery'), '1.1.3');
+    wp_register_script('themescripts', get_template_directory_uri() . '/scripts.js', array('jquery'), '2.1');
     wp_enqueue_script('themescripts');
   }
 }

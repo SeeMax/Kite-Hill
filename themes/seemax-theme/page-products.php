@@ -82,6 +82,11 @@
                       <?php endwhile;?>
                     <?php endif;?>
 									</div>
+									<div class="health-logos">
+										<img class="img1" src="<?php echo get_template_directory_uri(); ?>/img/non-gmo-icon.jpg" >
+										<img class="img2" src="<?php echo get_template_directory_uri(); ?>/img/kosher-icon-2.jpg" >
+									</div>
+
 								</div>
 
 							</div>

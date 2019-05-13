@@ -1,16 +1,16 @@
 $(window).on('load', function() {
-	// if (screen.width >= 1025){
+
 
 		var setupTL = new TimelineMax();
-		setupTL.set($('.date-dot'), {opacity:0,scale:3});
+		setupTL.set($('.segmentActor:not(:first-child) .date-dot'), {opacity:0,scale:3});
 		setupTL.set($('.story-line'), {height:0});
 		setupTL.set($('.full-story-line'), {height:0});
-		setupTL.set($('.date-number'), {x:10, opacity:0});
-		setupTL.set($('.segment-count'), {x:-10, opacity:0});
-		setupTL.set($('.segmentActor img'), {rotationY:-45,opacity:0,transformOrigin:'center top'});
-		setupTL.set($('.segmentActor h2'), {rotationX:20,y:-3,opacity:0,transformOrigin:'left top'});
-		setupTL.set($('.segmentActor h3'), {rotationX:20,y:-3,opacity:0,transformOrigin:'left top'});
-		setupTL.set($('.segmentActor p'), {rotationX:20,y:-3,opacity:0,transformOrigin:'center top'});
+		setupTL.set($('.segmentActor:not(:first-child) .date-number'), {x:10, opacity:0});
+		setupTL.set($('.segment-count:not(:first-child)'), {x:-10, opacity:0});
+		setupTL.set($('.segmentActor:not(:first-child) img'), {rotationY:-45,opacity:0,transformOrigin:'center top'});
+		setupTL.set($('.segmentActor:not(:first-child) h2'), {rotationX:20,y:-3,opacity:0,transformOrigin:'left top'});
+		setupTL.set($('.segmentActor:not(:first-child) h3'), {rotationX:20,y:-3,opacity:0,transformOrigin:'left top'});
+		setupTL.set($('.segmentActor:not(:first-child) p'), {rotationX:20,y:-3,opacity:0,transformOrigin:'center top'});
 		setupTL.set($('.story-segment'), {opacity:1});
 
 		$('.story-segment').each(function(){
@@ -52,5 +52,5 @@ $(window).on('load', function() {
 			}).setTween(tl2).addTo(controller);
 
 		});
-	// }// End Screen Width Scope
+
 });
