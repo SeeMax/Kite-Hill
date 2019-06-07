@@ -83,8 +83,13 @@
                     <?php endif;?>
 									</div>
 									<div class="health-logos">
+										<?php $logos = get_sub_field('health_logo');
+										if( $logos && in_array('gmo', $logos) ): ?>
 										<img class="img1" src="<?php echo get_template_directory_uri(); ?>/img/non-gmo-icon.jpg" >
+										<?php endif; ?>
+										<?php if( $logos && in_array('kosher', $logos) ): ?>
 										<img class="img2" src="<?php echo get_template_directory_uri(); ?>/img/kosher-icon-2.jpg" >
+										<?php endif; ?>
 									</div>
 
 								</div>

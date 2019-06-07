@@ -1329,7 +1329,9 @@ hr {
     border-top: 1px solid #C8C8C8; }
 
 #mc_embed_signup {
-  width: 100%; }
+  width: 100%;
+  max-width: 300px;
+  margin-top: 24px; }
   #mc_embed_signup .button {
     text-transform: none;
     font-size: 18px;
@@ -2184,6 +2186,8 @@ li.share-pinterest a.sd-button > span {
     padding-top: 30px;
     border-top: 2px solid #5E514D;
     margin-bottom: 30px; }
+  .yogurt-award-section a {
+    color: #008FDE; }
   .yogurt-award-section .left-half img {
     position: absolute;
     left: 0;

@@ -17,7 +17,7 @@
 
 
 				<!-- Begin Mailchimp Signup Form -->
-				<div style="display:none" id="mc_embed_signup">
+				<div id="mc_embed_signup">
 					<form action="https://kite-hill.us20.list-manage.com/subscribe/post?u=8312f73d7e99f3850e240441a&amp;id=172737aef9" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 						<div id="mc_embed_signup_scroll">
 							<div class="mc-field-group">
